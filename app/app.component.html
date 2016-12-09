@@ -4,3 +4,9 @@
 <button (click)="clickIt()">The Event</button>
 
 <input type="text" [(ngModel)]="name">
+<br>
+<ul>
+    <li *ngFor="let customer of customers">
+        <app-customer [customer]="customer"></app-customer>
+    </li>
+</ul>
