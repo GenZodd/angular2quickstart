@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CustomerComponent } from './customer/customer.component'
+import { CustomerComponent } from './customer/customer.component';
 
 @Component({
   selector: 'my-app',
   templateUrl: 'app/app.component.html',
-  entryComponents: [CustomerComponent]  
+  entryComponents: [CustomerComponent]
 })
 export class AppComponent  
 { 
