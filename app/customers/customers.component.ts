@@ -9,12 +9,12 @@ import { CustomerService } from '../customer/customer.service';
 })
 export class CustomersComponent implements OnInit {
     // customers: {id: number, name: string }[];
-    customers: any;
+    customers: any[];
 
     constructor(private _customerService: CustomerService) { }
 
     ngOnInit() { 
         //  this._customerService.getCustomers().then(customers => this.customers = customers);
-         this.customers = this._customerService.getCustomers();
+         this._customerService.getCustomers().then(customers => this.customers = customers);
     }
 }

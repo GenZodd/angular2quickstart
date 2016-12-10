@@ -10,10 +10,10 @@ export class CustomerService {
 
     getCustomers() {
         return this._http.get(this.customerFile)
-        .map((response: Response) => response.json());
-        // .toPromise()
+        .map((response: Response) => response.json())
+        .toPromise()
         // .then((response: Response) => response.json() as {id: number, name: string }[])
-        // .catch(this.handleError);
+        .catch(this.handleError);
     }
 
     private handleError(error: any): Promise<any> {
